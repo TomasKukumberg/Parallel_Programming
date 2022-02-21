@@ -3,6 +3,8 @@ from collections import Counter
 
 
 class Shared():
+    """init class with counter (index to array),
+    end (number of entries) and elms (array)"""
     def __init__(self, size):
         self.counter = 0
         self.end = size
@@ -10,6 +12,9 @@ class Shared():
 
 
 def increment(shared, mutex):
+    """Increment value at index of array where shared.counter is currently "pointing".
+    Mutex is used to avoid problems with multithreading. 
+    First argument is the shared object and the rest of arguments are objects you want to use in this function."""
     mutex.lock()
     while shared.counter < shared.end:
         shared.elms[shared.counter] += 1
