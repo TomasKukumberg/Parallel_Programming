@@ -50,6 +50,6 @@ A problem that occurs here is that if we don't check the condition in 'if' block
 In some cases, too small of an array might cause that the output seems right, even though it's wrong. The program is just too fast to cause any errors. These errors can be exposed by using a larger array or using a sleep function, which forces threads to switch and that's when issues start happening. That's why i've tested my results with different sized arrays, sleep functions and also i've used different versions of python to make sure it's working (3.10.2 and 3.8.1 specifically). All my tests ended with the correct amount of incremented values (1 million). I've printed out the result with the Counter class used in a seminar.
 
 ### Helpful links and resources i've used
-1. Our seminar and lectures
+1. [Our seminar and lectures](https://uim.fei.stuba.sk/predmet/i-ppds/)
 2. [This awesome video about mutex](https://youtu.be/oq29KUy29iQ)
 3. [This awesome video about deadlocks](https://youtu.be/LjWug2tvSBU)
