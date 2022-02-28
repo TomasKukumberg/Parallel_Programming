@@ -40,5 +40,4 @@ I've tried this exercise, but couldn't come up with a solution. I think the corr
 I've tested both solutions with the use of rand() functions to randomize thread switching of the scheduler. I've also used different thread sizes to make sure it's not just a coincidence that barrier works and all tests passed. All prints always printed N times the 'before' print and also N times 'after' print.
 ## :scroll: Helpful links and resources i've used
 1. [Our seminar and lectures](https://uim.fei.stuba.sk/predmet/i-ppds/)
-2. [This awesome video about mutex](https://youtu.be/oq29KUy29iQ)
-3. [This awesome video about deadlocks](https://youtu.be/LjWug2tvSBU)
+2. [This awesome video about barriers](https://youtu.be/_P-HYxHsVPc)
