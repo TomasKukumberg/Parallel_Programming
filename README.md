@@ -36,3 +36,5 @@ We also need to clear the event, if we want to use the same event again. We need
 ```
 ## :three: Third exercise
 I've tried this exercise, but couldn't come up with a solution. I think the correct approach would be to either use a barrier or a rendezvous pattern to synchronize i+1 and i thread together, and then calculate i+2. This approach would repeat until we get to the Nth result, which is the Nth Fibonacci's number we want to calculate.
+## :notebook: Experiments and results
+I've tested both solutions with the use of rand() functions to randomize thread switching of the scheduler. I've also used different thread sizes to make sure it's not just a coincidence that barrier works and all tests passed. All prints always printed N times the 'before' print and also N times 'after' print.
