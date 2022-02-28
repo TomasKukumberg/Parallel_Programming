@@ -27,3 +27,5 @@ Second exercise is similar to the first one, with the difference that the barrie
         self.T.clear()
 ```
 We also need to clear the event, if we want to use the same event again. We need to be very careful with the clear method, because if we clear before the wait function, we will get a deadlock.
+## :three: Third exercise
+I've tried this exercise, but couldn't come up with a solution. I think the correct approach would be to either use a barrier or a rendezvous pattern to synchronize i+1 and i thread together, and then calculate i+2. This approach would repeat until we get to the Nth result, which is the Nth Fibonacci's number we want to calculate.
