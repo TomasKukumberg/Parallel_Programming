@@ -81,5 +81,4 @@ It just depends if we want to prioritize monitors over sensors, or vice versa. I
 ![alt text](https://i.imgur.com/oM5ssP8.png)
 ## :scroll: Helpful links and resources i've used
 1. [Our seminar and lectures](https://uim.fei.stuba.sk/predmet/i-ppds/)
-2. [Matplotlib documentation](https://matplotlib.org/2.0.2/mpl_toolkits/mplot3d/tutorial.html)
 
