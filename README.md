@@ -8,7 +8,7 @@ We are using multiple synchronization patterns in this exercise:
 3. Event
 4. Mutex
 
-All these patterns are used for synchronization. For example, we are using the barrier to synchronize cooks. We wait until they are all finished, and only then we signalize to savages that the pot is full. Also, we use an Event to signalize all cooks that they can start cooking. Before I was using a semaphore for this as well, so i decided to change the strategy and the Event worked straight away. Event is also more appropriate for this, because we don't want only one cook to signalize he can cook, but we want to signalize all of them so they can simultaneously start working. Mutex is like always used to protect critical parts (shared memory). For example, in the barrier, we use a mutex to increase the counter.
+All these patterns are used for synchronization. For example, we are using the barrier to synchronize cooks. We wait until they are all finished, and only then we signalize to savages that the pot is full. Also, we use an Event to signalize all cooks that they can start cooking. Before we were using a semaphore for this but it was giving us a deadlock, so we decided to change the strategy and the Event worked straight away. Event is also more appropriate for this, because we don't want only one cook to know he can cook, but we want to signalize all of them so they can simultaneously start working. Mutex is traditionally used to protect critical parts (shared memory). For example, in the barrier, we use a mutex to increase the counter.
 
 ## Pseudocode
 Pseudocode is pretty straightforward, first one is the wait function in the barrier:
