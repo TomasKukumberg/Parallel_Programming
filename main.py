@@ -23,10 +23,10 @@ class SimpleBarrier():
     and a barrier, which is just a semaphore initialized with 0.
     The barrier lets threads pass only when cnt is equal to N.
     Class members:
-    N : number of threads when we want to unlock the barrier.
-    cnt : currently waiting threads at the barrier
-    mutex: lock to protect the counter
-    barrier: semaphore initialized to 0
+    N -> number of threads when we want to unlock the barrier.
+    cnt -> currently waiting threads at the barrier
+    mutex -> lock to protect the counter
+    barrier -> semaphore initialized to 0
     """
     def __init__(self, N):
         """
