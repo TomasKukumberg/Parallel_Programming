@@ -69,6 +69,11 @@ class Shared():
     to savages and other cooks won't have to signalize.
     """
     def __init__(self, m):
+        """
+        Initialize the Shared class.
+        Args:
+        m -> number of servings
+        """
         self.mutex = Mutex()
         self.mutex2 = Mutex()
         self.servings = m
