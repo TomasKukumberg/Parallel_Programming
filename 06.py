@@ -19,6 +19,7 @@ class Shared():
     def __init__(self, N):
         """Init the class with number of space in the shop."""
         self.mutex = Mutex()
+        self.mutex2 = Mutex()
         self.customer = Semaphore(0)
         self.barber = Semaphore(0)
         self.customerDone = Semaphore(0)
@@ -29,13 +30,13 @@ class Shared():
         """Customer enters a shop and either gets in queue
         or leaves if space is full.
         Takes id of customer as argument, returns None."""
-        self.mutex.lock()
+        self.mutex2.lock()
         if self.queue.full():
             print(f'No space left in the shop. Customer {i} is leaving...')
         else:
             print(f'Customer {i} is waiting in the queue...')
             self.queue.put(i)
-        self.mutex.unlock()
+        self.mutex2.unlock()
 
     def leaveShop(self, i):
         """Customer leaves the shop. Takes id as argument, returns None."""
@@ -91,7 +92,7 @@ def barber(shared):
 
 def main():
     """Main function of this module. Returns None."""
-    shared = Shared(2)
+    shared = Shared(3)
     barberDude = Thread(barber, shared)
     customers = []
 
