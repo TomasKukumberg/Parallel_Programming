@@ -21,7 +21,7 @@ def task1():
 ```
 Task 2 is the same:
 ```python
-def task1():
+def task2():
   for i in 10:
     yield i
 ```
